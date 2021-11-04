@@ -28,6 +28,12 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 # Copy existing application directory contents to the working directory
 COPY --chown=www-data:www-data . /var/www
 
+RUN composer install --optimize-autoloader --no-dev
+RUN composer dump-autoload -o
+
+RUN php artisan cache:clear
+RUN php artisan config:clear
+
 #EXPOSE 9000
 #CMD ["php-fpm"]
 
