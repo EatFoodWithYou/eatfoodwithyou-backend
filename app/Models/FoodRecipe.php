@@ -45,7 +45,7 @@ class FoodRecipe extends Model
     }
 
     public function getPhotoUrlAttribute(){
-        return env('APP_URL').':8000'.'/storage'.'/foodRecipe/'.$this->photo;
+        return env('APP_URL').'/storage'.'/foodRecipe/'.$this->photo;
     }
 
     // public function getUserNameAttribute(){
