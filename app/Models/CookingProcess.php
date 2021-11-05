@@ -17,6 +17,6 @@ class CookingProcess extends Model
     }
 
     public function getPhotoUrlAttribute(){
-        return env('APP_URL').':8000'.'/storage'.'/cookingProcess/'.$this->photo;
+        return env('APP_URL').'/storage'.'/cookingProcess/'.$this->photo;
     }
 }
