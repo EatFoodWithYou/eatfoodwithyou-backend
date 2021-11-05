@@ -3,7 +3,7 @@ name: Eatfoodwithyou
 on:
   push:
     branches:
-      - "master"
+      - 'master'
 
 jobs:
   build-laravel:
@@ -27,7 +27,9 @@ jobs:
           context: ./
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/eatfoodwithyou:latest
+          tags: |
+            ${{ secrets.DOCKER_HUB_USERNAME }}/eatfoodwithyou:latest
+            ${{ secrets.DOCKER_HUB_USERNAME }}/eatfoodwithyou:${{ github.sha }}
 
   build-nginx:
     runs-on: ubuntu-latest
@@ -50,4 +52,6 @@ jobs:
           context: ./
           file: ./nginx.Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/nginx-eatfoodwithyou:latest
+          tags: |
+            ${{ secrets.DOCKER_HUB_USERNAME }}/nginx-eatfoodwithyou:latest
+            ${{ secrets.DOCKER_HUB_USERNAME }}/nginx-eatfoodwithyou:${{ github.sha }}
