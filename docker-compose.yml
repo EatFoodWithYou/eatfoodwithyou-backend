@@ -5,11 +5,16 @@ services:
         image: supavet/eatfoodwithyou
         restart: unless-stopped
         env_file: .env
+        volumes:
+            - ./public:/var/www/storage/app/public/
         depends_on:
             - db
     nginx:
         image: supavet/nginx-eatfoodwithyou
         restart: unless-stopped
+        volumes:
+            - ./public:/var/www/public/storage/
+            - ./public:/var/www/storage/app/public/
         ports:
             - 80:80
         depends_on:
