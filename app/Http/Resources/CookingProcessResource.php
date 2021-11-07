@@ -15,6 +15,6 @@ class CookingProcessResource extends JsonResource
     public function toArray($request)
     {
         return array_merge(parent::toArray($request),
-            ['photo_url' => env('APP_URL').'/storage'.'/cookingProcess'.$this->photo]);
+            ['photo_url' => env('APP_URL').'/storage'.'/cookingProcess/'.$this->photo]);
     }
 }
