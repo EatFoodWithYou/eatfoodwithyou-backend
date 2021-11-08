@@ -41,7 +41,7 @@ DB_PORT={portname}
 DB_DATABASE= {your database name }
 DB_USERNAME= {your database username }
 DB_PASSWORD= {your database password }
-
+```
 ** Run and Generate APP **
 ```
 composer dump-autoload
