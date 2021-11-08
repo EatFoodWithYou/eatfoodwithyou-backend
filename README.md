@@ -52,9 +52,6 @@ php artisan key:generate
 ```
 **Migrate And Seed**
 ```
-php artisan:migrate
-```
-```
 php artisan migrate:fresh --seed
 ```
 
