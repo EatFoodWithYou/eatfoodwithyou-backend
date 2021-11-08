@@ -17,12 +17,12 @@
 
 -----------------------
 ## Project setup
-** Clone this Repo **
+**Clone this Repo**
 
 ```
 https://github.com/EatFoodWithYou/eatfoodwithyou-backend.git
 ```
-** Install Program **
+**Install Program**
 
 ```
 composer install
@@ -30,11 +30,11 @@ composer install
 ```
 npm install
 ```
-** Create file .env from .env.example **
+**Create file .env from .env.example**
 ```
 copy .env.example .env
 ```
-** Setup&edit Database in File .env **
+**Setup&edit Database in File .env**
 ```
 DB_CONNECTION=mysql
 DB_HOST={hostname}
@@ -43,14 +43,14 @@ DB_DATABASE= {your database name }
 DB_USERNAME= {your database username }
 DB_PASSWORD= {your database password }
 ```
-** Run and Generate APP **
+**Run and Generate APP**
 ```
 composer dump-autoload
 ```
 ```
 php artisan key:generate
 ```
-** Migrate And Seed **
+**Migrate And Seed**
 ```
 php artisan:migrate
 ```
