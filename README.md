@@ -20,6 +20,7 @@
 ** Clone this Repo **
 
 ```
+https://github.com/EatFoodWithYou/eatfoodwithyou-backend.git
 ```
 ** Install Program **
 
